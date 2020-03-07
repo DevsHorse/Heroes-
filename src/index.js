@@ -6,7 +6,7 @@ import { filteringCards } from './modules/filteringCards';
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 	//@ AJAX request
-	const getData = () => fetch('../dbHeroes.json')
+	const getData = () => fetch('./dbHeroes.json')
 		.then(res => res.json())
 		.catch(err => {
 			console.error(err);
