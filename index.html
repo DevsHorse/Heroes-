@@ -13,7 +13,7 @@
   <header class="header-section"> 
     <div class="container">
       <div class="header">
-            <h1 class="logo">MARVEL - Movies&Heroes</h1>
+            <h1 class="logo">MARVEL - Movies & Heroes</h1>
       </div>
     </div>
   </header>
@@ -24,13 +24,9 @@
       <div class="films-container">
         <h2 class="films-title">Filter</h2>
         <ul class="films-list">
-          <li class="films-list_item">
-              <input class="checkbox" type="checkbox" name="film" id="film1">
-              <label for="film1">Movie</label>
-          </li>
-          <li class="films-list_item">
-              <input class="checkbox" type="checkbox" name="film" id="film2">
-              <label for="film2">Movie</label>
+          <li class="films-list_item films-list_item-mod">
+              <input class="checkbox" type="checkbox" name="film" id="filmNo">
+              <label for="filmNo">Doesn't have movies*</label>
           </li>
         </ul>
       </div>
@@ -39,28 +35,9 @@
     <div class="container">
       <div class="main">
 
-          <div class="card">
-            <img class="card-img" src="https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/9/9a/BlackWidow-EndgameProfile.jpg" alt="">
-            <h2 class="card-name">Name: <span class="name">Anchor</span></h2>
-            <h3 class="card-realName">Realname: <span class="realName">Realname</span></h3>
-            <div class="card-main">
-              <div class="card-species">Species: <span class="species">Human</span></div>
-              <div class="card-citizenship">Citizenship: <span class="citizenship">Asgardian</span></div>
-              <div class="card-gender">Gender: <span class="gender">Female</span></div>
-              <div class="card-actors">Actors: <span class="actors">Tilda Swinton</span></div>
-            </div>
-            <div class="card-row">
-              <div class="card-birthday">Birthday: <span class="birthday">1324</span></div>
-              <div class="card-deathday">Deathday: <span class="deathday">1324</span></div>
-            </div>
-            <div class="card-status">Status: <span class="status">Alive</span></div>
-            <div class="card-movies-title">Фильмы:</div>
-            <ul class="card-movies">
-              <li class="movies-item">Captain America: The First Avenger</li>
-              <li class="movies-item">Avengers: Infinity War</li>
-              <li class="movies-item">Avengers: Endgame</li>
-            </ul>
-          </div> <!-- / Card-->
+        <div class="empty-message">
+          No cards matching your filter
+        </div>
 
       </div>
     </div>
