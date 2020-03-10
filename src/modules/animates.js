@@ -3,8 +3,8 @@ export const animateFilter = () => {
   filter.style.transition = 'transform 1s ease';
 
   document.addEventListener('scroll', () => {
-    if (document.documentElement.scrollTop > 167) {
-      filter.style.transform = `translateY(${document.documentElement.scrollTop - 167}px)`;
+    if (document.documentElement.scrollTop > 1000) {
+      filter.style.transform = `translateY(${document.documentElement.scrollTop - 250}px)`;
     } else {
       filter.style.transform = 'none';
     }

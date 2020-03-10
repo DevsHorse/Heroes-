@@ -12,6 +12,10 @@ body:after {
   background-size: cover;
   z-index: -1;
 }
+.disabled {
+  color: #666;
+  text-decoration: line-through;
+}
 /* Header */
 .header-section {
   background: rgb(0,0,0);
@@ -127,8 +131,14 @@ body:after {
   letter-spacing: 1px;
   color: #fff;
 }
+.films-title-sub {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
 .films-list {
-  font-size: 16px;
+  font-size: 14px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -156,12 +166,37 @@ body:after {
   text-shadow: 0 0 2px rgb(243, 74, 74);
 }
 
-@media(max-width: 1600px) {
+@media(max-width: 1650px) {
   .films-title {
     font-size: 20px;
   }
   .films-list_item {
     font-size: 12px;
+  }
+}
+@media(max-width: 1470px) {
+  .films-title {
+    font-size: 16px;
+  }
+  .films-title-sub {
+    font-size: 14px;
+  }
+  .films-list_item {
+    font-size: 12px;
+  }
+}
+@media(max-width: 1260px) {
+  .films-title {
+    font-size: 14px;
+  }
+  .films-title-sub {
+    font-size: 12px;
+  }
+  .films-list_item {
+    font-size: 12px;
+  }
+  .logo {
+    font-size: 38px;
   }
 }
 /* Other */
@@ -173,6 +208,29 @@ body:after {
 @media (max-width: 1600px) {
   .container {
     width: 990px;
+  }
+}
+@media(max-width: 1470px) {
+  .container {
+    width: 780px;
+  }
+}
+@media(max-width: 1260px) {
+  .container {
+    width: 620px;
+  }
+}
+@media(max-width: 1080px) {
+  .container {
+    width: 350px;
+  }
+}
+@media(max-width: 860px) {
+  .container {
+    width: 300px;
+  }
+  .logo-container {
+    width: 500px;
   }
 }
 
@@ -355,4 +413,31 @@ body:after {
 .empty-message {
   display: none;
   font-size: 18px;
+}
+@media (max-width: 1470px) {
+  .card {
+    flex-basis: 45%;
+  }
+}
+@media (max-width: 1260px) {
+  .card-name, .realName, .species, .citizenship,
+  .gender, .actors, .birthday, .deathday, .status {
+    font-size: 12px;
+  }
+  .card-realName, .card-species, .card-citizenship,
+  .card-gender, .card-actors, .card-birthday, .card-deathday,
+  .card-status{
+    font-size: 10px;
+  }
+  .movies-item {
+    font-size: 12px;
+  }
+  .card-movies-title {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1080px) {
+  .card {
+    flex-basis: 95%;
+  }
 }
