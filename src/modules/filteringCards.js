@@ -3,6 +3,40 @@ export const filteringCards = () => {
   const cards = document.querySelectorAll('.card');
   const message = document.querySelector('.empty-message');
 
+  const disableCheckbox = target => {
+    filmsList.querySelectorAll('label').forEach(item => {
+
+      if (target.textContent !== item.textContent && target.tagName !== 'LI' && target.tagName !== 'UL') {
+
+        const filmNo = document.querySelector('label[for="filmNo"]');
+        const cards = document.querySelectorAll('.card');
+        const input = document.getElementById(item.getAttribute('for'));
+        let сount = 0;
+  
+        item.classList.add('disabled');
+        input.setAttribute('disabled', 'true');
+
+          cards.forEach(card => {
+            if (card.style.display === 'block') {
+              const films = card.querySelectorAll('.movies-item');
+
+              films.forEach(film => { if ( item.textContent === film.textContent ) сount++ });
+
+              if (!card.querySelector('.card-after') && item === filmNo) {
+                item.classList.remove('disabled');
+                input.removeAttribute('disabled');
+              } 
+            }
+          });
+
+          if (сount > 0) {
+            item.classList.remove('disabled');
+            input.removeAttribute('disabled');
+          };  
+      }
+    });
+  };
+
   /**
   *  	@param {arr[]} container_for_filtering_values
   */
@@ -83,5 +117,7 @@ export const filteringCards = () => {
       message.style.display = 'block';
     }
 
+    // Checkbox disable
+    disableCheckbox(target);
   });
 };
